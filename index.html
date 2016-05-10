@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" ng-app="translationChecker">
+
+<head>
+    <meta charset="utf-8">
+    <title>My HTML File</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="./client/app.js"></script>
+</head>
+
+<body ng-controller="translationDocumentChecker">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+        Translation Checker
+      </a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="jumbotron">
+            <p class="lead">Upload an XML document and see whether or not there are any similar translations within the document. Simply
+                upload your file, and provide the path to the translations.</p>
+            <p>An example language document has been provided in the project. Feel free to upload <mark>language.xml</mark>,
+                and select the path <mark>root.translate</mark></p>
+            <form name="translationForm">
+                <div class="form-group">
+                    <label for="languageFile">Language File</label>
+                    <input type="file" accept=".xml" class="form-control" file-model="languageDocument.file" id="languageFile">
+                </div>
+
+                <div class="form-group">
+                    <label for="translationPath">Translation path</label>
+                    <input type="text" class="form-control" id="translationPath" ng-model="languageDocument.path" placeholder="root.translate">
+                </div>
+            </form>
+
+            <button type="button" class="btn btn-primary" ng-click="getTranslation()" ng-model="singleModel" uib-btn-checkbox btn-checkbox-true="1"
+                btn-checkbox-false="0"> Submit</button>
+            <div style="padding-top: 5px" ng-if="translationError">
+                <p class="bg-danger">{{translationError}}</p>
+            </div>
+        </div>
+        <div ng-if="translations">
+            <h2>Similar Translations</h2>
+            <p>Below are token and translations that have been identified as being somewhat similar</p>
+            <div ng-repeat="(key, value) in translations" class="well">
+                <h4>Token: {{key}} - Translation: {{value.value}}</h4>
+                <ul>
+                    <div ng-repeat="similarity in value.similarities">
+                        <li><strong>Token</strong>: {{similarity.token}}</li>
+                        <li><strong>Translation</strong>: {{similarity.translation}}</li>
+                    </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

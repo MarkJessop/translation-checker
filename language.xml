@@ -1,0 +1,22 @@
+<root>
+    <meta>
+        <doc>
+            <name>Language File</name>
+            <version>1.0</version>
+        </doc>
+        <language>
+            <from>English</from>
+            <to>French</to>
+        </language>
+    </meta>
+    <translate>
+        <SUBMITTING_SURVEY>Soumettre les données</SUBMITTING_SURVEY>
+        <SUBMITTING_SURVEY_AGAIN>Soumettre le donnés</SUBMITTING_SURVEY_AGAIN>
+        <LOADING_DATA>Télécharger les données"</LOADING_DATA>
+        <INACTIVE_SURVEY>Il semble que le questionnaire que vous tentez de compléter n’est pas en fonction présentement.</INACTIVE_SURVEY>
+        <SEARCH_ZIP>À proximité de zip"</SEARCH_ZIP>
+        <UNKNOWN_DISTANCE>Distance inconnue</UNKNOWN_DISTANCE>
+        <UNKNOWN_DISTANCE_TWO>Distance inconnue</UNKNOWN_DISTANCE_TWO>
+        <SUBMITTING_SURVEY_TWO>Soumettre le donnés</SUBMITTING_SURVEY_TWO>
+    </translate>
+</root>

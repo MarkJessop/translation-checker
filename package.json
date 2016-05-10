@@ -1,0 +1,32 @@
+{
+  "name": "translate-checker",
+  "version": "1.0.0",
+  "description": "CLI tool to check for duplicates in a translation XML file",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "./node_modules/.bin/mocha --reporter spec --recursive"
+  },
+  "keywords": [
+    "xml",
+    "translate"
+  ],
+  "author": "Mark Jessop <markdjessop@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.5",
+    "async": "^1.5.2",
+    "bootstrap": "^3.3.6",
+    "commander": "^2.9.0",
+    "express": "^4.13.4",
+    "lodash": "^4.11.2",
+    "multer": "^1.1.0",
+    "string-similarity": "^1.0.0",
+    "xml2json": "^0.9.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-connect-middleware": "^0.3.1",
+    "mocha": "^2.4.5"
+  }
+}

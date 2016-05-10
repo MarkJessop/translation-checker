@@ -30,3 +30,4 @@ nice to add.  These include:
 - Better styling for the UI
 - More validation of inputs on both the front end and back end
 - Use and Express router to handle API routes
+- Use environment variables to handle accepted file types and level of similarity to check on
